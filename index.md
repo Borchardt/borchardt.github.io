@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Happy Jekylling!"
+title: "borc 🤗"
 ---
 
-## You're ready to go!
+## Hello!
 
-hello world
+I'm Jackson. Currently, I'm working at a neuroscience lab in San Francisco.
