@@ -15,9 +15,10 @@ body {
 #nav-list {
   border-right: solid 1px;
   list-style: none;
-  margin-top: 2em;
   margin-bottom: 2em;
-  width: 5%;
+  margin-top: 2em;
+  padding-right: 1em;
+  padding-top: 1em;
 }
 
 .nav-link {
@@ -27,13 +28,20 @@ body {
   text-decoration: none;
 }
 
-.nav-subfolder-link {
+.nav-subfolder-link, .nav-subfolder-p-hidden {
   padding-left: 1em;
 }
 
 .nav-summary {
   list-style: none;
   padding-bottom: 1em;
+}
+
+.nav-p-hidden {
+  font-weight: bold;
+  height: 0;
+  margin-bottom: -1em;
+  visibility: hidden;
 }
 
 .nav-link:hover, .nav-summary:hover {

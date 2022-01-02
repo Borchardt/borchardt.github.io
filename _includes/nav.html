@@ -2,14 +2,18 @@
     {% for item in site.data.nav.toc %}
         {% if item.page %}
             <li><a href="{{ item.url }}" class="nav-link">{{ item.page }}</a></li>
+            <p class="nav-p-hidden">{{ item.page }}</p>
         {% elsif item.subfolderitems %}
             <li>
                 <details>
-                    <summary class="nav-summary" data-text="{{ item.title }}">{{ item.title }}</summary>
+                    <summary class="nav-summary">{{ item.title }}</summary>
                     {% for subitem in item.subfolderitems %}
-                        <a href="{{ subitem.url }}" data-text="{{ subitem.page }}" class="nav-link nav-subfolder-link">{{ subitem.page }}</a>
+                        <a href="{{ subitem.url }}" class="nav-link nav-subfolder-link">{{ subitem.page }}</a>
                     {% endfor %}
                 </details>
+                {% for subitem in item.subfolderitems %}
+                    <p class="nav-p-hidden nav-subfolder-p-hidden">{{ subitem.page }}</p>
+                {% endfor %}
             </li>
         {% endif %}
     {% endfor %}
