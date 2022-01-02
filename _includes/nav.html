@@ -1,0 +1,16 @@
+<ul id="nav-list">
+    {% for item in site.data.nav.toc %}
+        {% if item.page %}
+            <li><a href="{{ item.url }}" class="nav-link">{{ item.page }}</a></li>
+        {% elsif item.subfolderitems %}
+            <li>
+                <details>
+                    <summary class="nav-summary" data-text="{{ item.title }}">{{ item.title }}</summary>
+                    {% for subitem in item.subfolderitems %}
+                        <a href="{{ subitem.url }}" data-text="{{ subitem.page }}" class="nav-link nav-subfolder-link">{{ subitem.page }}</a>
+                    {% endfor %}
+                </details>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
